@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .calculator {
+        background: rgb(0, 0, 0);
+        width: 320px;
+        border-radius: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+
+        .display {
+            background: black;
+            color: #cfccce;
+            padding: 1.5rem;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            position: relative;
+
+            input {
+                background: #000;
+                color: #FAF7E8;
+                text-align: end;
+                font-size: 3.5rem;
+                font-weight: normal;
+                position: absolute;
+                border: none;
+            }
+            input:focus {
+                outline: none;
+            }
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: #FAF7E8;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+            .btn {
+                padding: 1rem;
+                font-size: 1.125rem;
+                font-weight: 600;
+                border-radius: 0.75rem;
+                border: none;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                transition: .2s all;
+
+                &:hover{
+                    box-shadow:0 0 11px 0 #6363638f;
+                    scale: 1.1 1.1;
+                }
+            }
+
+            .operator {
+                background-color: #fd4c4c;
+                color: white;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+                &:hover{
+                    box-shadow:0 0 11px 0 #ff0404a8;
+                }
+            }
+
+            .number {
+                background-color: white;
+                color: black;
+            }
+
+            .double {
+                grid-column: span 2;
+            }
+        }
+    }
+        p{
+        margin-top: 50px;
+        color: #474747;
+
+        span{
+            color: #fa3e3e;
+            font-weight: 600;
+        }
+    }
+}
